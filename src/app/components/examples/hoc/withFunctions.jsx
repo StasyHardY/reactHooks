@@ -1,14 +1,14 @@
-/*eslint-disable*/
-import React from 'react'
+
+import React from "react";
 import Card from "../../common/Card";
 
 const withFunctions = (Component) => (props) => {
    const isAuth = localStorage.getItem("user");
    const handleLogin = () => {
-         return localStorage.setItem("user",'auth');
+         return localStorage.setItem("user", "auth");
    };
    const handleLogOut = () => {
-         return localStorage.setItem("user", '');
+         return localStorage.setItem("user", "");
    };
 
    return (
@@ -23,5 +23,4 @@ const withFunctions = (Component) => (props) => {
    );
 };
 
- 
 export default withFunctions;
